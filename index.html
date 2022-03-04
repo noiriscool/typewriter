@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Typewriter Template</title>
+
+<h1 class="fw-bolder">Header</h1>
+<!-- IMPORTANT: DO NOT DELETE THE ELEMENT BELOW-->
+<p class="lead" id="header-message"></p>
+
+<!--Typewriter Code-->
+<script src="/script.js"></script>
+
+
+<!--Control Elements Below-->
+<script>
+    (() => {
+        const messages = [
+            "Typwriter Element 1",
+            "Typwriter Element 2",
+            "Typwriter Element 3",
+            "Typwriter Element 4",
+            "Typwriter Element 5",
+        ]
+
+//Control/Customize times and loops below
+        const msgelem = document.getElementById("header-message")
+        window.addEventListener("load", () => 
+            new Typewriter(msgelem, {
+                loop: true,
+                delay: 40,
+                strings: messages,
+                pauseFor: 3400,
+                deleteSpeed: 35,
+                autoStart: true
+            })
+        )
+    })()
+</script>
+</body>
+</html>
